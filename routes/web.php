@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Http\Request;
 
 //Route::get('home' , 'Home@index')->name('trangchu');
 
@@ -40,3 +41,16 @@ Route::get('cart' , function (){
 Route::get('checkout' , function (){
     return view('site.pages.checkout');
 });
+
+Route::get('login' , function (){
+    return view('login')->with(['title' => 'Login']);
+});
+
+Route::post('login' , function(Request $request){
+    echo '<pre>';
+    var_dump($request);
+});
+
+//Auth::routes();
+//
+//Route::get('/home', 'HomeController@index');

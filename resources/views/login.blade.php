@@ -2,174 +2,80 @@
 <html >
 <head>
     <meta charset="UTF-8">
-    <title>Đăng Nhập</title>
+    <title>{{$title}} - Harichiu</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
 
-    <style>
-        /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
-        @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
-        @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+    <link rel="stylesheet" href="{{URL::asset('/public/css/login.css')}}">
 
-        body{
-            margin: 0;
-            padding: 0;
-            background: #fff;
-
-            color: #fff;
-            font-family: Arial;
-            font-size: 12px;
-        }
-
-        .body{
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            right: -40px;
-            bottom: -40px;
-            width: auto;
-            height: auto;
-            background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
-            background-size: cover;
-            -webkit-filter: blur(5px);
-            z-index: 0;
-        }
-
-        .grad{
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            right: -40px;
-            bottom: -40px;
-            width: auto;
-            height: auto;
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
-            z-index: 1;
-            opacity: 0.7;
-        }
-
-        .header{
-            position: absolute;
-            top: calc(50% - 35px);
-            left: calc(50% - 255px);
-            z-index: 2;
-        }
-
-        .header div{
-            float: left;
-            color: #fff;
-            font-family: 'Exo', sans-serif;
-            font-size: 35px;
-            font-weight: 200;
-        }
-
-        .header div span{
-            color: #5379fa !important;
-        }
-
-        .login{
-            position: absolute;
-            top: calc(50% - 75px);
-            left: calc(50% - 50px);
-            height: 150px;
-            width: 350px;
-            padding: 10px;
-            z-index: 2;
-        }
-
-        .login input[type=text]{
-            width: 250px;
-            height: 30px;
-            background: transparent;
-            border: 1px solid rgba(255,255,255,0.6);
-            border-radius: 2px;
-            color: #fff;
-            font-family: 'Exo', sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            padding: 4px;
-        }
-
-        .login input[type=password]{
-            width: 250px;
-            height: 30px;
-            background: transparent;
-            border: 1px solid rgba(255,255,255,0.6);
-            border-radius: 2px;
-            color: #fff;
-            font-family: 'Exo', sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            padding: 4px;
-            margin-top: 10px;
-        }
-
-        .login input[type=button]{
-            width: 260px;
-            height: 35px;
-            background: #fff;
-            border: 1px solid #fff;
-            cursor: pointer;
-            border-radius: 2px;
-            color: #a18d6c;
-            font-family: 'Exo', sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            padding: 6px;
-            margin-top: 10px;
-        }
-
-        .login input[type=button]:hover{
-            opacity: 0.8;
-        }
-
-        .login input[type=button]:active{
-            opacity: 0.6;
-        }
-
-        .login input[type=text]:focus{
-            outline: none;
-            border: 1px solid rgba(255,255,255,0.9);
-        }
-
-        .login input[type=password]:focus{
-            outline: none;
-            border: 1px solid rgba(255,255,255,0.9);
-        }
-
-        .login input[type=button]:focus{
-            outline: none;
-        }
-
-        ::-webkit-input-placeholder{
-            color: rgba(255,255,255,0.6);
-        }
-
-        ::-moz-input-placeholder{
-            color: rgba(255,255,255,0.6);
-        }
-    </style>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
 </head>
 
 <body>
-<div class="body"></div>
-<div class="grad"></div>
-<div class="header">
-    <div>Hari<span>Chiu</span></div>
+
+<!-- Mixins-->
+<!-- Pen Title-->
+<div class="pen-title">
+    <h1>LOGIN FORM</h1><span>Code <i class='fa fa-code'></i> by <a href='http://andytran.me'>Chiuchiu</a></span>
 </div>
-<br>
-<div class="login">
-    <form action="" method="post">
-        <input type="text" placeholder="username" name="user"><br>
-        <input type="password" placeholder="password" name="password"><br>
-        <input type="button" value="Login">
-    </form>
+<div class="rerun"><a href="">Rerun Login</a></div>
+<div class="container">
+    <div class="card"></div>
+    <div class="card">
+        <h1 class="title">Login</h1>
+        <form method="post" action="./login">
+            <div class="input-container">
+                <input type="text" id="username" name="username" required="required"/>
+                <label for="username">Username</label>
+                <div class="bar"></div>
+            </div>
+            <div class="input-container">
+                <input type="password" id="password" name="password" required="required"/>
+                <label for="password">Password</label>
+                <div class="bar"></div>
+            </div>
+            {{csrf_field()}}
+            <div class="button-container">
+                <button><span>Login</span></button>
+            </div>
+            <div class="footer"><a href="#">Forgot your password?</a></div>
+        </form>
+    </div>
+    <div class="card alt">
+        <div class="toggle"></div>
+        <h1 class="title">Register
+            <div class="close"></div>
+        </h1>
+        <form method="post" action="register">
+            <div class="input-container">
+                <input type="text" id="username" required="required"/>
+                <label for="username">Username</label>
+                <div class="bar"></div>
+            </div>
+            <div class="input-container">
+                <input type="password" id="password" required="required"/>
+                <label for="#{label}">Password</label>
+                <div class="bar"></div>
+            </div>
+            <div class="input-container">
+                <input type="password" id="repassword" required="required"/>
+                <label for="repassword">Repeat Password</label>
+                <div class="bar"></div>
+            </div>
+
+            {{csrf_field()}}
+            <div class="button-container">
+                <button><span>Register</span></button>
+            </div>
+        </form>
+    </div>
 </div>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
+<script src="{{URL::asset('/public/js/login.js')}}"></script>
 
 </body>
 </html>
