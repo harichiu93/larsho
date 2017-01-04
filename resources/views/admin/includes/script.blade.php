@@ -54,4 +54,5 @@
 <script src="{{URL::asset('/public/admin/js/retina.js')}}"></script>
 
 <script src="{{URL::asset('/public/admin/js/custom.js')}}"></script>
+<script src="https://use.fontawesome.com/0badbae2f7.js"></script>
 <!-- end: JavaScript-->

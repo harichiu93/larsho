@@ -14,11 +14,7 @@ use Illuminate\Http\Request;
 
 //Route::get('home' , 'Home@index')->name('trangchu');
 
-Route::group(['prefix' => 'admin'], function (){
-    Route::get('index/{name}' , 'Admin\Home@index');
 
-    Route::get('login' , 'Admin\Home@login');
-});
 
 //Route site
 
@@ -51,3 +47,13 @@ Route::post('login' , 'User@login');
 //Auth::routes();
 //
 //Route::get('/home', 'HomeController@index');
+
+
+
+Route::group(['prefix' => 'admin' , 'namespace' => 'Admin'], function (){
+    Route::get('index' , 'Home@index');
+
+    Route::get('login' , 'Home@login');
+
+    Route::get('category' , 'Category@index');
+});
