@@ -36,7 +36,7 @@ Route::get('product/{id}/' , function ($id){
 
 Route::get('cart' , function (){
     return view('site.pages.cart');
-});
+})->name('giohang');
 
 Route::get('checkout' , function (){
     return view('site.pages.checkout');
@@ -46,10 +46,7 @@ Route::get('login' , function (){
     return view('login')->with(['title' => 'Login']);
 });
 
-Route::post('login' , function(Request $request){
-    echo '<pre>';
-    var_dump($request);
-});
+Route::post('login' , 'User@login');
 
 //Auth::routes();
 //
