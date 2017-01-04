@@ -12,21 +12,23 @@
 <div class="container-fluid-full">
     <div class="row-fluid">
         @include('admin.layouts.sidebar')
-    </div>
-    <!-- start: noscript -->
-    @include('admin.includes.noscript')
-    <!-- end: noscript -->
 
-    <!-- start: Content -->
-    <div id="content" class="span10">
-        <!-- start: Breadcrumb -->
-        @include('admin.includes.breadcrumb')
-        <!-- end: Breadcrumb -->
 
-        <div class="row-fluid">
+
+
+        <!-- start: noscript -->
+        @include('admin.includes.noscript')
+        <!-- end: noscript -->
+
+        <!-- start: Content -->
+        <div id="content" class="span10">
+            <!-- start: Breadcrumb -->
+            @include('admin.includes.breadcrumb')
+            <!-- end: Breadcrumb -->
+
             @yield('content')
-        </div>
 
+        </div>
     </div>
     <!-- end: Content -->
 </div>
