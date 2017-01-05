@@ -2,7 +2,13 @@
     <div class="nav-collapse sidebar-nav">
         <ul class="nav nav-tabs nav-stacked main-menu">
             <li><a href="./index"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>
-            <li><a href="./category"><i class="fa fa-list"></i><span class="hidden-tablet"> Category</span></a></li>
+            <li>
+                <a class="dropmenu" href="#"><i class="fa fa-list-ul fa-fw" aria-hidden="true"></i><span class="hidden-tablet"> Category</span><div class="pull-right"><i class="fa fa-angle-down" aria-hidden="true"></i></div></a>
+                <ul>
+                    <li><a class="submenu" href="./index"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></i><span class="hidden-tablet"> List Category</span></a></li>
+                    <li><a class="submenu" href="./add"><i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i><span class="hidden-tablet"> Add Category</span></a></li>
+                </ul>
+            </li>
             {{--<li><a href="index.html"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>--}}
             {{--<li><a href="messages.html"><i class="icon-envelope"></i><span class="hidden-tablet"> Messages</span></a></li>--}}
             {{--<li><a href="tasks.html"><i class="icon-tasks"></i><span class="hidden-tablet"> Tasks</span></a></li>--}}

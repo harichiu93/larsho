@@ -49,11 +49,23 @@ Route::post('login' , 'User@login');
 //Route::get('/home', 'HomeController@index');
 
 
-
+//Route Admin
 Route::group(['prefix' => 'admin' , 'namespace' => 'Admin'], function (){
     Route::get('index' , 'Home@index');
 
     Route::get('login' , 'Home@login');
 
-    Route::get('category' , 'Category@index');
+    //Route category
+    Route::group(['prefix' => 'category'] , function (){
+       Route::get('list' , 'Category@list');
+       Route::get('add' , 'Category@add');
+       Route::post('add' , 'Category@doAdd');
+       Route::get('edit/{id}' , 'Category@edit')->where(['id' => '[0-9]+']);
+       Route::post('edit' , 'Category@doEdit');
+       Route::get('delete/{id}' , 'Category@delete')->where(['id' => '[0-9]+']);
+    });
+    //End Route Category
+
+
 });
+//End Route Admin
