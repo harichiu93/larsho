@@ -18,7 +18,6 @@
                         <th>ID</th>
                         <th>Name</th>
                         <th>Slug</th>
-                        <th>Status</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
@@ -26,11 +25,8 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td class="center">2012/01/01</td>
-                            <td class="center">Member</td>
-                            <td class="center">
-                                <span class="label label-success">Active</span>
-                            </td>
+                            <td class="center">Test</td>
+                            <td class="center">dienthoai lg</td>
                             <td class="center">
                                 <a class="btn btn-success" href="#">
                                     <i class="halflings-icon white zoom-in"></i>
