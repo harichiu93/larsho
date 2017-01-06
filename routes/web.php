@@ -44,10 +44,6 @@ Route::get('login' , function (){
 
 Route::post('login' , 'User@login');
 
-//Auth::routes();
-//
-//Route::get('/home', 'HomeController@index');
-
 
 //Route Admin
 Route::group(['prefix' => 'admin' , 'namespace' => 'Admin'], function (){
