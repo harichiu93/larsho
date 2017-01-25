@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @include('includes.head')
+    @include('site.includes.head')
 </head>
 <body>
 
 <div class="header-area">
-    @include('includes.header')
+    @include('site.includes.header')
 </div> <!-- End header area -->
 
 <div class="site-branding-area">
-    @include('includes.brand')
+    @include('site.includes.brand')
 </div> <!-- End site branding area -->
 
 <div class="mainmenu-area">
-    @include('includes.menu')
+    @include('site.includes.menu')
 </div> <!-- End mainmenu area -->
 
 <div class="slider-area">
-    @include('includes.slide')
+    @include('site.includes.slide')
 </div> <!-- End slider area -->
 
 <div class="promo-area">
-    @include('includes.promo')
+    @include('site.includes.promo')
 </div> <!-- End promo area -->
 
 <div class="maincontent-area">
-    @include('includes.lastest')
+    @include('site.includes.lastest')
 </div> <!-- End main content area -->
 
 <div class="brands-area">

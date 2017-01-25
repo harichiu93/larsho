@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -47,11 +47,19 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        $mess = [
+            'passsword.confirmed' => 'Mật khẩu không trùng khớp.',
+            'password.min' => 'Mật khẩu của bạn quá ngắn. Vui lòng nhập mật khẩu trên 6 kí tự.',
+            'phone.digits_between' => 'Số điện thoại chưa đúng định dạng.',
+            'email.unique' => 'Email này đã có người sử dụng.'
+
+        ];
         return Validator::make($data, [
-            'name' => 'required|max:255',
+            'name' => 'max:255,required',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
-        ]);
+            'phone' => 'digits_between:9,12',
+        ],$mess);
     }
 
     /**
@@ -66,6 +74,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'phone' => $data['phone'],
         ]);
     }
 }

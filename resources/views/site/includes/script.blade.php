@@ -1,8 +1,8 @@
 <!-- Latest jQuery form server -->
-<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="{{url('public/js/jquery.min.js')}}"></script>
 
 <!-- Bootstrap JS form CDN -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="{{url('public/js/bootstrap.min.js')}}"></script>
 
 <!-- jQuery sticky menu -->
 <script src="{{URL::asset('/public/js/owl.carousel.min.js')}}"></script>

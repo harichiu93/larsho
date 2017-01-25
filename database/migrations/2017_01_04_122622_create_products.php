@@ -18,7 +18,8 @@ class CreateProducts extends Migration
             $table->string('name', 255);
             $table->bigInteger('amount');
             $table->integer('stock')->default(0);
-            $table->integer('category');
+            $table->bigInteger('discount')->nullable();
+            $table->integer('cat_id');
             $table->longText('description')->nullable();
             $table->longText('review')->nullable();
             $table->string('img');
